@@ -1,0 +1,6 @@
+version: '3.8'
+services:
+  security:
+    build: .
+    container_name: agisibershield
+    restart: always

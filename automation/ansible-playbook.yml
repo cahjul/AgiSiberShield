@@ -1,0 +1,39 @@
+---
+    - name: AgiSiberShield Security Deployment
+      hosts: all
+      become: yes
+      tasks:
+        - name: Update system
+          apt:
+            update_cache: yes
+            upgrade: dist
+    
+        - name: Install security tools
+          apt:
+            name: "{{ item }}"
+            state: present
+          loop:
+            - fail2ban
+            - ufw
+    
+        - name: Apply firewall rules
+          ufw:
+            rule: allow
+            port: "{{ item }}"
+          loop:
+            - 22
+            - 443
+    
+        - name: Disable root login
+          lineinfile:
+            path: /etc/ssh/sshd_config
+            regexp: '^PermitRootLogin'
+            line: 'PermitRootLogin no'
+          notify: restart ssh
+    
+      handlers:
+        - name: restart ssh
+          service:
+            name: ssh
+            state: restarted
+    

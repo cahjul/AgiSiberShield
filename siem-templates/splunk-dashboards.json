@@ -1,0 +1,12 @@
+{
+  "dashboard": {
+    "title": "Cyber Threat Monitoring",
+    "panels": [
+      {
+        "type": "chart",
+        "title": "Failed SSH Logins",
+        "query": "index=security sourcetype=auth_logs action=failed"
+      }
+    ]
+  }
+}
