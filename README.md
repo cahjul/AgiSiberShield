@@ -1,14 +1,16 @@
-# AgiSiberShield Security Tools
+# 🛡️ AgiSiberShield Advanced Security Suite  
 
-AgiSiberShield is a collection of security scripts, IDS rules, and SIEM templates to help secure IT environments.
+AgiSiberShield is an enterprise-grade security toolkit designed for Linux and Windows hardening, intrusion detection, and SIEM monitoring.
 
-## 📂 Contents:
-- 🔧 **Scripts**: Automated security hardening for Linux and Windows.
-- 🛡️ **IDS Rules**: Snort rules for detecting network threats.
-- 📊 **SIEM Templates**: Prebuilt dashboards for Splunk monitoring.
-- 📑 **Reports**: Sample risk assessment documentation.
+## 🚀 Features
+✅ **Advanced security scripts** for Linux & Windows  
+✅ **Custom Snort IDS rules** to detect cyber threats  
+✅ **Ansible automation** for bulk deployment  
+✅ **Docker support** for easy deployment  
+✅ **Splunk SIEM dashboards** for real-time monitoring  
 
-## 🔍 Usage:
-Clone this repository:
+## 🔍 Getting Started
+### Clone this repository:
 ```bash
 git clone https://github.com/yourusername/AgiSiberShield.git
+cd AgiSiberShield
